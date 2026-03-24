@@ -9,9 +9,12 @@
 O teste de software é um **conjunto de atividades** para descobrir defeitos e avaliar a qualidade de artefatos (objetos de teste). Ele não se resume apenas à execução do software, mas envolve planejamento e alinhamento com o ciclo de vida de desenvolvimento (SDLC).
 
 *   **Verificação vs. Validação:**
+<p align="center">
+  <img src="images/verificacaoxvalidacao.png" alt="Verificação vs Validação" width="600">
+</p>
 
-    *   **Verificação:** "Estamos construindo o produto corretamente?". Checa se o sistema atende aos requisitos especificados.
-    *   **Validação:** "Estamos construindo o produto certo?". Checa se o sistema atende às necessidades dos usuários em seu ambiente operacional.
+   *   **Verificação:** "Estamos construindo o produto corretamente?". Checa se o sistema atende aos requisitos especificados.
+   *   **Validação:** "Estamos construindo o produto certo?". Checa se o sistema atende às necessidades dos usuários em seu ambiente operacional.
 *   **Teste Estático vs. Dinâmico:** O teste **estático** não envolve a execução do código (revisões e análise estática), enquanto o **dinâmico** requer a execução do software.
 
 ### 1.1.1 Objetivos do teste
