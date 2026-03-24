@@ -3,14 +3,13 @@
 
 ---
 
-# Capítulo 1: Fundamentos de Teste
-
-Este capítulo aborda a base conceitual dos testes de software, seus objetivos, princípios e o processo fundamental que rege a atividade.
+# Fundamentos de Teste
 
 ## 1.1 O que é teste?
 O teste de software é um **conjunto de atividades** para descobrir defeitos e avaliar a qualidade de artefatos (objetos de teste). Ele não se resume apenas à execução do software, mas envolve planejamento e alinhamento com o ciclo de vida de desenvolvimento (SDLC).
 
 *   **Verificação vs. Validação:**
+
     *   **Verificação:** "Estamos construindo o produto corretamente?". Checa se o sistema atende aos requisitos especificados.
     *   **Validação:** "Estamos construindo o produto certo?". Checa se o sistema atende às necessidades dos usuários em seu ambiente operacional.
 *   **Teste Estático vs. Dinâmico:** O teste **estático** não envolve a execução do código (revisões e análise estática), enquanto o **dinâmico** requer a execução do software.
