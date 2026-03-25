@@ -38,10 +38,14 @@ O teste contribui para o sucesso do projeto ao fornecer uma avaliação direta d
     *   **Controle de Qualidade (QC):** Abordagem **corretiva** e orientada ao produto. O teste é a principal forma de QC.
     *   **Garantia da Qualidade (QA):** Abordagem **preventiva** e orientada ao processo. Foca no aprimoramento dos processos para que o produto final tenha qualidade.
 *   **Cadeia de Falha:**
-    *   **Erro (Equívoco):** Ação humana que produz um resultado incorreto.
-    *   **Defeito (Bug/Falta):** Imperfeição em um produto de trabalho que pode causar uma falha.
-    *   **Falha:** Evento em que o sistema não atende aos seus requisitos operacionais.
-    *   **Causa-raiz:** Motivo fundamental para a ocorrência de um erro.
+<p align="center">
+  <img src="images/cadeiadefalha.png" alt="Verificação vs Validação" width="600">
+</p>
+
+  *   **Erro (Equívoco):** Ação humana que produz um resultado incorreto.
+  *   **Defeito (Bug/Falta):** Imperfeição em um produto de trabalho que pode causar uma falha.
+  *    **Falha:** Evento em que o sistema não atende aos seus requisitos operacionais.
+  *    **Causa-raiz:** Motivo fundamental para a ocorrência de um erro.
 ---
 ## 1.3 Princípios de Teste
 Existem **sete princípios** que guiam a prática de testes:
