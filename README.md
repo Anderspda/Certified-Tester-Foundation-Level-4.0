@@ -194,11 +194,123 @@ Esse papel está mais relacionado à parte técnica do processo. Envolve ativida
 
 ---
 
-## Fechamento
-
-O tópico 1.4 reforça que o teste de software é um processo estruturado, composto por atividades, artefatos e responsabilidades bem definidas. Além disso, mostra que o contexto do projeto influencia diretamente a forma como o teste será conduzido. Compreender esse tópico é importante para enxergar o teste de forma mais ampla, não apenas como execução de casos, mas como uma atividade organizada, rastreável e alinhada aos objetivos do projeto.
-
 ## 1.5 Habilidades Essenciais e Boas Práticas
 *   **Habilidades Genéricas:** Meticulosidade, curiosidade, pensamento crítico, conhecimento técnico e do domínio, além de **excelente comunicação** para relatar más notícias de forma construtiva.
 *   **Abordagem de Equipe Completa:** Todos os membros da equipe (incluindo desenvolvedores e representantes do negócio) compartilham a responsabilidade pela qualidade.
 *   **Independência dos Testes:** Testadores de fora da equipe de desenvolvimento trazem diferentes perspectivas e evitam vieses cognitivos, sendo mais eficazes na localização de defeitos, embora possam sofrer com o isolamento.
+
+---
+
+# Testes ao longo do Ciclo de Vida de Desenvolvimento de Software
+
+O teste de software não acontece de forma isolada no final do desenvolvimento. Ele está presente ao longo de todo o ciclo de vida do software, contribuindo para a qualidade desde as fases iniciais até a entrega final.
+
+Este capítulo aborda como o teste se integra ao ciclo de vida de desenvolvimento, os diferentes níveis de teste, os tipos de teste, a manutenção de testes e a importância de práticas colaborativas como DevOps.
+
+---
+
+## 2.1 Teste no contexto do ciclo de vida de desenvolvimento
+
+O teste deve ser integrado ao ciclo de vida de desenvolvimento de software (SDLC), independentemente do modelo adotado. Isso significa que as atividades de teste acompanham as fases do desenvolvimento e não devem ser deixadas apenas para o final.
+
+O envolvimento antecipado do teste permite identificar defeitos mais cedo, reduzindo custos e aumentando a qualidade do produto.
+
+Diferentes modelos de desenvolvimento influenciam a forma como o teste é aplicado:
+
+### Modelo sequencial (Waterfall)
+
+O teste ocorre após as fases de desenvolvimento. Nesse modelo, os níveis de teste são bem definidos e executados de forma mais estruturada.
+
+### Modelos iterativos e incrementais
+
+O desenvolvimento ocorre em ciclos menores, e o teste acompanha cada incremento. Isso permite feedback mais rápido e ajustes contínuos.
+
+### Modelos ágeis
+
+O teste é integrado ao desenvolvimento desde o início. As atividades de teste acontecem continuamente dentro das iterações, com forte colaboração entre os membros do time.
+
+---
+
+## 2.2 Níveis de teste
+
+Os níveis de teste representam diferentes estágios em que o software é avaliado. Cada nível tem objetivos específicos e foca em partes diferentes do sistema.
+
+### Teste de componente (ou unidade)
+
+Foca em partes individuais do sistema, como funções ou classes. Geralmente é realizado por desenvolvedores e tem como objetivo verificar o funcionamento correto de pequenas unidades de código.
+
+### Teste de integração
+
+Verifica a interação entre componentes ou sistemas. O objetivo é identificar problemas na comunicação e integração entre partes do sistema.
+
+### Teste de sistema
+
+Avalia o sistema completo, verificando se ele atende aos requisitos especificados. Nesse nível, o sistema é testado como um todo.
+
+### Teste de aceitação
+
+Tem como objetivo validar se o sistema atende às necessidades dos usuários e está pronto para uso. Normalmente envolve stakeholders ou usuários finais.
+
+---
+
+## 2.3 Tipos de teste
+
+Os tipos de teste estão relacionados aos objetivos específicos que se deseja validar no sistema.
+
+### Testes funcionais
+
+Verificam se o sistema realiza corretamente as funcionalidades esperadas, conforme os requisitos.
+
+### Testes não funcionais
+
+Avaliam características como desempenho, usabilidade, segurança, confiabilidade e compatibilidade.
+
+### Testes estruturais (caixa branca)
+
+Baseiam-se na estrutura interna do sistema, como código, lógica e fluxos de execução.
+
+### Testes relacionados a mudanças
+
+São realizados quando o sistema sofre alterações, com o objetivo de garantir que mudanças não introduziram novos defeitos.
+
+---
+
+## 2.4 Teste de manutenção
+
+O teste de manutenção ocorre após mudanças no sistema já em produção ou em uso.
+
+Essas mudanças podem ocorrer por:
+- Correções de defeitos
+- Melhorias no sistema
+- Adaptações a mudanças no ambiente
+
+Nesse contexto, dois tipos de teste são importantes:
+
+### Teste de confirmação
+
+Verifica se um defeito corrigido foi realmente resolvido.
+
+### Teste de regressão
+
+Garante que alterações não impactaram negativamente funcionalidades já existentes.
+
+---
+
+## 2.5 Teste em DevOps
+
+No contexto de DevOps, o teste é integrado ao fluxo contínuo de desenvolvimento e entrega de software.
+
+Nesse modelo, o objetivo é acelerar a entrega sem comprometer a qualidade. Para isso, o teste precisa ser:
+
+- Automatizado sempre que possível
+- Integrado ao pipeline de integração contínua (CI/CD)
+- Executado com frequência
+- Alinhado com práticas colaborativas entre desenvolvimento, teste e operações
+
+O teste em DevOps reforça a ideia de que qualidade é responsabilidade de todos e que o feedback deve ser rápido e contínuo.
+
+---
+
+O Capítulo 2 reforça que o teste deve acompanhar todo o ciclo de vida do software, sendo adaptado ao modelo de desenvolvimento adotado. Ele apresenta os níveis de teste, os diferentes tipos de teste, a importância do teste de manutenção e o papel do teste em ambientes modernos como DevOps.
+
+Esse entendimento é fundamental para enxergar o teste como uma atividade contínua, estratégica e integrada ao desenvolvimento, e não apenas como uma etapa final do processo.
