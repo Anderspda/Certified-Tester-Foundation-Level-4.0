@@ -209,108 +209,48 @@ Este capítulo aborda como o teste se integra ao ciclo de vida de desenvolviment
 
 ---
 
-## 2.1 Teste no contexto do ciclo de vida de desenvolvimento
-
-O teste deve ser integrado ao ciclo de vida de desenvolvimento de software (SDLC), independentemente do modelo adotado. Isso significa que as atividades de teste acompanham as fases do desenvolvimento e não devem ser deixadas apenas para o final.
-
-O envolvimento antecipado do teste permite identificar defeitos mais cedo, reduzindo custos e aumentando a qualidade do produto.
-
-Diferentes modelos de desenvolvimento influenciam a forma como o teste é aplicado:
-
-### Modelo sequencial (Waterfall)
-
-O teste ocorre após as fases de desenvolvimento. Nesse modelo, os níveis de teste são bem definidos e executados de forma mais estruturada.
-
-### Modelos iterativos e incrementais
-
-O desenvolvimento ocorre em ciclos menores, e o teste acompanha cada incremento. Isso permite feedback mais rápido e ajustes contínuos.
-
-### Modelos ágeis
-
-O teste é integrado ao desenvolvimento desde o início. As atividades de teste acontecem continuamente dentro das iterações, com forte colaboração entre os membros do time.
+* **2.1.1 O impacto do Ciclo de Vida de Desenvolvimento de Software no Teste:** O modelo de desenvolvimento (Sequencial, Iterativo ou Incremental) dita o ritmo, o escopo e o momento das atividades de teste. Modelos ágeis exigem testes frequentes e automação, enquanto modelos sequenciais focam em fases bem definidas e documentação robusta.
+* **2.1.2 Ciclo de Vida de Desenvolvimento de Software e boas práticas de Teste:** Independentemente do modelo, as seguintes boas práticas devem ser aplicadas:
+    * **Atividades correspondentes:** Para cada atividade de desenvolvimento, deve haver uma atividade de teste correspondente.
+    * **Objetivos específicos:** Cada nível de teste possui objetivos de teste específicos e apropriados para aquele nível.
+    * **Análise e Modelagem precoce:** A análise e a modelagem de testes devem começar logo após a definição do produto de trabalho correspondente (requisitos ou design).
+    * **Envolvimento dos testadores:** Os testadores devem estar envolvidos na revisão de documentos assim que os rascunhos estiverem disponíveis.
+* **2.1.3 Teste como um Impulsionador para o Desenvolvimento de Software:** Abordagens onde os testes são escritos antes do código para guiar o desenvolvimento:
+    * **TDD (Test-Driven Development):** Foca no código. O desenvolvedor escreve um teste unitário que falha, codifica para ele passar e depois refatora.
+    * **ATDD (Acceptance Test-Driven Development):** Foca nos requisitos. A equipe define os testes de aceite antes da codificação para garantir que o sistema atenda às necessidades de negócio.
+    * **BDD (Behavior-Driven Development):** Foca no comportamento. Usa linguagem natural (Gherkin: Dado/Quando/Então) para criar uma compreensão comum entre todos e guiar a automação.
+* **2.1.4 DevOps e Teste:** Integra o teste à cultura de colaboração e automação. O foco está no feedback contínuo através de pipelines de **CI/CD**, permitindo que falhas sejam detectadas rapidamente após mudanças no código, aumentando a velocidade de entrega sem perder qualidade.
+* **2.1.5 A Abordagem Shift-Left:** Refere-se a realizar atividades de teste o mais cedo possível no SDLC. Testar requisitos e design antes da implementação reduz custos, pois evita que defeitos se propaguem para as fases finais, onde a correção é mais cara.
+* **2.1.6 Retrospectivas e Melhoria de Processo:** Reuniões de lições aprendidas para analisar a eficácia das atividades de teste. Servem para ajustar a estratégia, melhorar a colaboração e evitar a recorrência de problemas em iterações futuras.
 
 ---
 
-## 2.2 Níveis de teste
+## 2.2 Níveis de Teste e Tipos de Teste
 
-Os níveis de teste representam diferentes estágios em que o software é avaliado. Cada nível tem objetivos específicos e foca em partes diferentes do sistema.
+### 2.2.1 Níveis de Teste (Onde testamos?)
+1.  **Teste de Componente:** Foca em unidades isoladas de software (classes, módulos) e sua lógica interna. Geralmente realizado pelo desenvolvedor.
+2.  **Teste de Integração:** Foca na comunicação e interfaces entre componentes ou sistemas. Garante que os módulos funcionem juntos.
+3.  **Teste de Sistema:** Avalia o comportamento do sistema completo em relação aos requisitos originais, validando fluxos de ponta a ponta.
+4.  **Teste de Aceite:** Valida se o sistema está pronto para ser utilizado pelos usuários finais, clientes ou para cumprir requisitos legais/operacionais.
 
-### Teste de componente (ou unidade)
+### 2.2.2 Tipos de Teste (O que testamos?)
+* **Teste Funcional:** Avalia "o que" o sistema faz, baseando-se nos requisitos funcionais.
+* **Teste Não Funcional:** Avalia "como" o sistema se comporta (performance, segurança, usabilidade).
+* **Teste de Caixa-Branca:** Baseado na análise da estrutura interna, como código e fluxo de controle.
 
-Foca em partes individuais do sistema, como funções ou classes. Geralmente é realizado por desenvolvedores e tem como objetivo verificar o funcionamento correto de pequenas unidades de código.
+### 2.2.3 Testes de Confirmação e Teste de Regressão
+Estes testes são realizados após alterações no sistema para garantir a qualidade do que foi modificado e do que permaneceu intacto:
 
-### Teste de integração
-
-Verifica a interação entre componentes ou sistemas. O objetivo é identificar problemas na comunicação e integração entre partes do sistema.
-
-### Teste de sistema
-
-Avalia o sistema completo, verificando se ele atende aos requisitos especificados. Nesse nível, o sistema é testado como um todo.
-
-### Teste de aceitação
-
-Tem como objetivo validar se o sistema atende às necessidades dos usuários e está pronto para uso. Normalmente envolve stakeholders ou usuários finais.
-
+* **Teste de Confirmação (Re-teste):** * **Objetivo:** Confirmar que um defeito específico foi corrigido.
+    * **Ação:** O testador executa exatamente os mesmos passos que falharam anteriormente para validar a correção.
+* **Teste de Regressão:** * **Objetivo:** Garantir que nenhuma "regressão" (efeito colateral) ocorreu em áreas não modificadas do sistema.
+    * **Ação:** Execução de testes em funcionalidades que já funcionavam para assegurar que o novo código não quebrou o antigo. 
+    * **Dica de Estudo:** É o principal candidato para a **automação de testes**, devido à sua natureza repetitiva.
+    
 ---
 
-## 2.3 Tipos de teste
+## 2.3 Teste de Manutenção
 
-Os tipos de teste estão relacionados aos objetivos específicos que se deseja validar no sistema.
+O teste de manutenção é realizado em sistemas que já estão em produção devido a modificações, migrações de ambiente ou desativação (retirada) do software.
 
-### Testes funcionais
-
-Verificam se o sistema realiza corretamente as funcionalidades esperadas, conforme os requisitos.
-
-### Testes não funcionais
-
-Avaliam características como desempenho, usabilidade, segurança, confiabilidade e compatibilidade.
-
-### Testes estruturais (caixa branca)
-
-Baseiam-se na estrutura interna do sistema, como código, lógica e fluxos de execução.
-
-### Testes relacionados a mudanças
-
-São realizados quando o sistema sofre alterações, com o objetivo de garantir que mudanças não introduziram novos defeitos.
-
----
-
-## 2.4 Teste de manutenção
-
-O teste de manutenção ocorre após mudanças no sistema já em produção ou em uso.
-
-Essas mudanças podem ocorrer por:
-- Correções de defeitos
-- Melhorias no sistema
-- Adaptações a mudanças no ambiente
-
-Nesse contexto, dois tipos de teste são importantes:
-
-### Teste de confirmação
-
-Verifica se um defeito corrigido foi realmente resolvido.
-
-### Teste de regressão
-
-Garante que alterações não impactaram negativamente funcionalidades já existentes.
-
----
-
-## 2.5 Teste em DevOps
-
-No contexto de DevOps, o teste é integrado ao fluxo contínuo de desenvolvimento e entrega de software.
-
-Nesse modelo, o objetivo é acelerar a entrega sem comprometer a qualidade. Para isso, o teste precisa ser:
-
-- Automatizado sempre que possível
-- Integrado ao pipeline de integração contínua (CI/CD)
-- Executado com frequência
-- Alinhado com práticas colaborativas entre desenvolvimento, teste e operações
-
-O teste em DevOps reforça a ideia de que qualidade é responsabilidade de todos e que o feedback deve ser rápido e contínuo.
-
----
-
-O Capítulo 2 reforça que o teste deve acompanhar todo o ciclo de vida do software, sendo adaptado ao modelo de desenvolvimento adotado. Ele apresenta os níveis de teste, os diferentes tipos de teste, a importância do teste de manutenção e o papel do teste em ambientes modernos como DevOps.
-
-Esse entendimento é fundamental para enxergar o teste como uma atividade contínua, estratégica e integrada ao desenvolvimento, e não apenas como uma etapa final do processo.
+* **Análise de Impacto:** É a avaliação feita para identificar quais partes do sistema podem ser afetadas por uma mudança. Ela é essencial para determinar o escopo dos testes de regressão, garantindo que o esforço seja focado nas áreas de maior risco e otimizando o tempo de teste.
