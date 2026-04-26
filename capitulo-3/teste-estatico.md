@@ -83,7 +83,7 @@ O mesmo produto pode passar por múltiplos tipos de revisão, dependendo da form
 * **Revisão Técnica:** Realizada por pares técnicos. Foca na conformidade técnica e tomada de decisão.
 * **Inspeção:** O tipo mais formal. Usa checklists rigorosos, papéis definidos e métricas para encontrar defeitos.
 
-* Regra Importante: O autor não pode ser líder nem relator na inspeção.
+**Regra Importante: O autor não pode ser líder nem relator na inspeção.**
 
 ### 3.2.5 Fatores de Sucesso para Revisões
 * Definir objetivos claros e critérios de saída mensuráveis (nunca usar a revisão para avaliar os participantes);
